@@ -7,29 +7,31 @@ import java.util.List;
 
 public interface UserService {
     // 账号校验
-    public User checkUser(String userName, String passWord);
+    User checkUser(String userName, String passWord);
     // 根据用户名查询用户
-    public User getUserByUserName(String userName);
+    User getUserByUserName(String userName);
     // 根据用户ID查询用户
-    public User getUserByUserId(Integer userId);
+    User getUserByUserId(Integer userId);
     // 获取用户列表
-    public List<User> getUserList();
-    // 根据条件获取用户列表
-    public List<User> getUserListByWhere(QueryWrapper<User> queryWrapper);
-    // 获取用户数量
-    public Integer countUser();
-    // 根据条件获取用户数量
-    public Integer countUserByWhere(QueryWrapper<User> queryWrapper);
-    // 添加用户
-    public boolean addUser(User data);
-    // 更新用户
-    public boolean updateUser(Integer userId,User data);
-    // 删除用户
-    public boolean deleteUser(Integer userId, String userName);
-
+    List<User> getUserList();
+    // 获取用户列表(分页)
     List<User> getUserList(Integer page, Integer size);
-
+    // 根据条件获取用户列表
+    List<User> getUserListByWhere(QueryWrapper<User> queryWrapper);
+    // 获取用户数量
+    Integer countUser();
+    // 获取用户数量
     Object getUserCount();
-
+    // 根据条件获取用户数量
+    Integer countUserByWhere(QueryWrapper<User> queryWrapper);
+    // 添加用户
+    boolean addUser(User data);
+    // 更新用户(根据用户ID)
+    boolean updateUserByUserId(Integer userId, User data);
+    // 更新用户(根据用户名)
+    boolean updateUserByUserName(String userName, User data);
+    // 删除用户
+    boolean deleteUser(Integer userId, String userName);
+    // 删除用户
     boolean deleteUser(User user);
 }

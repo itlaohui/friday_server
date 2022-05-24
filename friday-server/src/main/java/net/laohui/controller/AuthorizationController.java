@@ -1,13 +1,14 @@
 package net.laohui.controller;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.log4j.Log4j2;
+import net.laohui.api.service.UserService;
 import net.laohui.config.RedisConfig;
 import net.laohui.enumerate.UserStatusEnum;
-import net.laohui.pojo.User;
-import net.laohui.pojo.UserRequestBody;
-import net.laohui.pojo.datamodel.UserProfile;
-import net.laohui.service.impl.UserServiceImpl;
+import net.laohui.api.bean.User;
+import net.laohui.api.bean.UserRequestBody;
+import net.laohui.api.bean.UserProfile;
 import net.laohui.util.JWTUtil;
 import net.laohui.util.RedisUtils;
 import net.laohui.util.ResponseResult;
@@ -32,8 +33,8 @@ import static org.apache.logging.log4j.util.Strings.isBlank;
 @Log4j2
 @RestController
 public class AuthorizationController {
-
-    UserServiceImpl userServiceImpl;
+    @Reference(version = "1.0.0", timeout = 60000)
+    UserService userService;
 
     HttpServletRequest request;
 
@@ -49,11 +50,6 @@ public class AuthorizationController {
     @Autowired
     public void setResponse(HttpServletResponse response) {
         this.response = response;
-    }
-
-    @Autowired
-    public void setUserService(UserServiceImpl userServiceImpl) {
-        this.userServiceImpl = userServiceImpl;
     }
 
     @Autowired
@@ -81,7 +77,7 @@ public class AuthorizationController {
         if (isBlank(username) || isBlank(password)) {
             return ResponseResult.error(400, "账户名和密码均为必须！");
         }
-        User user = userServiceImpl.checkUser(username, password);
+        User user = userService.checkUser(username, password);
         if (user != null && user.getUser_id() > 0) {
             try {
                 userStatus = UserStatusEnum.valueOf(user.getUser_status());
@@ -97,7 +93,7 @@ public class AuthorizationController {
             user.setLogin_time(new Date());
             user.setLogin_city(request.getRemoteAddr());
             user.setLogin_browser_ua(parameterUserAgent);
-            userServiceImpl.updateUserById(user);
+            userService.updateUserByUserId(user.getUser_id(), user);
             UserProfile userProfile = new UserProfile(user);
             if (!redisUtils.set(RedisConfig.LOGIN_BEACON + user.getUser_account_name(),userProfile, LOGIN_BEACON_MAX_TIME)) {
                 log.error("Redis用户信息写入失败{}", userProfile);
@@ -141,7 +137,7 @@ public class AuthorizationController {
         }
         boolean status = false;
         try {
-            status = userServiceImpl.addUser(user);
+            status = userService.addUser(user);
         } catch (DuplicateKeyException e) {
             if (Objects.requireNonNull(e.getMessage()).contains("SQLIntegrityConstraintViolationException")) {
                 return ResponseResult.error(500,"用户已存在！");

@@ -1,14 +1,15 @@
 package net.laohui.controller;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.log4j.Log4j2;
 import net.laohui.enumerate.UserStatusEnum;
 import net.laohui.exception.OperationException;
-import net.laohui.pojo.Config;
-import net.laohui.pojo.User;
-import net.laohui.service.RemoteConfigService;
-import net.laohui.service.UserService;
+import net.laohui.api.bean.RemoteConfig;
+import net.laohui.api.bean.User;
+import net.laohui.api.service.RemoteConfigService;
+import net.laohui.api.service.UserService;
 import net.laohui.util.ResponseResult;
 import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,20 +29,19 @@ import static org.apache.logging.log4j.util.Strings.isBlank;
 @RequestMapping(value = "admin")
 public class AdminController {
 
+    @Reference(version = "1.0.0", timeout = 60000)
     UserService userService;
+    @Reference(version = "1.0.0", timeout = 60000)
+    RemoteConfigService remoteConfigService;
     HttpServletRequest request;
     HttpServletResponse response;
-    RemoteConfigService remoteConfigService;
+
 
     @Autowired
     public void setVariables(HttpServletRequest request,
-                             UserService userService,
-                             RemoteConfigService remoteConfigService,
                              HttpServletResponse response) {
 
         this.request = request;
-        this.userService = userService;
-        this.remoteConfigService = remoteConfigService;
         this.response = response;
     }
 
@@ -168,7 +168,7 @@ public class AdminController {
             e.printStackTrace();
         }
         try {
-            boolean updateUserStatus = userService.updateUser(user.getUser_id(), user);
+            boolean updateUserStatus = userService.updateUserByUserId(user.getUser_id(), user);
             if (!updateUserStatus) {
                 return ResponseResult.error(400, "更新失败");
             }
@@ -183,9 +183,9 @@ public class AdminController {
     }
 
     @GetMapping(value = "getRemoteConfigList")
-    public ResponseResult<Config> getRemoteConfigList() {
+    public ResponseResult<RemoteConfig> getRemoteConfigList() {
         String key = request.getParameter("key");
-        Config config = remoteConfigService.getConfig(key);
+        RemoteConfig config = remoteConfigService.getConfig(key);
         return ResponseResult.success("查询成功", config);
     }
 }

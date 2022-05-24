@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="friday-server" />
+        <module name="friday-server-service" />
         <module name="friday-server-api" />
       </profile>
     </annotationProcessing>
@@ -17,6 +18,8 @@
       <module name="friday" options="" />
       <module name="friday-server" options="-parameters" />
       <module name="friday-server-api" options="-parameters" />
+      <module name="friday-server-service" options="-parameters" />
+      <module name="friday-sso" options="" />
     </option>
   </component>
 </project>

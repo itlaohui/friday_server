@@ -1,9 +1,10 @@
 package net.laohui.controller;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import lombok.extern.log4j.Log4j2;
+import net.laohui.api.bean.User;
 import net.laohui.config.Producer;
-import net.laohui.pojo.User;
-import net.laohui.service.UserService;
+import net.laohui.api.service.UserService;
 import net.laohui.util.JWTUtil;
 import net.laohui.util.RedisUtils;
 import net.laohui.util.ResponseResult;
@@ -19,14 +20,14 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import static com.alibaba.druid.util.StringUtils.isEmpty;
-
 @Log4j2
 @Controller
 public class TestController {
 
-    HttpServletRequest request;
+    @Reference(version = "1.0.0", timeout = 60000)
     UserService userService;
+
+    HttpServletRequest request;
     RedisUtils redisUtils;
     Producer producer;
     // redis登录信标
@@ -35,10 +36,9 @@ public class TestController {
     final long LOGIN_BEACON_MAX_TIME = 60 * 60; // 60 * 60 * 24
 
     @Autowired
-    public TestController(HttpServletRequest request, UserService userService, RedisUtils redisUtils,
+    public TestController(HttpServletRequest request, RedisUtils redisUtils,
                           Producer producer) {
         this.request = request;
-        this.userService = userService;
         this.redisUtils = redisUtils;
         this.producer = producer;
     }

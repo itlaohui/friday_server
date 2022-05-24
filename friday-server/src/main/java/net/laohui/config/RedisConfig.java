@@ -16,7 +16,7 @@ public class RedisConfig {
     // redis登录信标
     public final static String LOGIN_BEACON = "_LOGIN_BEACON_";
     // redis登录信标超时时间
-    public final static long LOGIN_BEACON_MAX_TIME = 60 * 60; // 60 * 60 * 24
+    public final static long LOGIN_BEACON_MAX_TIME = 60 * 60 * 24; // 60 * 60 * 24
 
     @Bean
     @SuppressWarnings("all")

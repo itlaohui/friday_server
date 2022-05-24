@@ -19,6 +19,7 @@
     <modules>
         <module>friday-server</module>
         <module>friday-server-api</module>
+        <module>friday-server-service</module>
     </modules>
 
     <properties>

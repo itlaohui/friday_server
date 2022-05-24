@@ -1,11 +1,12 @@
 package net.laohui.config;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import lombok.extern.log4j.Log4j2;
-import net.laohui.pojo.RequestInfo;
 import net.laohui.service.JwtToken;
-import net.laohui.service.UserService;
+import net.laohui.api.service.UserService;
 import net.laohui.util.JWTUtil;
 import net.laohui.util.RedisUtils;
+import net.laohui.util.RequestInfo;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -30,7 +31,7 @@ public class MyRealm extends AuthorizingRealm {
     final String LOGIN_BEACON = "_LOGIN_BEACON_";
     // redis登录信标超时时间
     final long LOGIN_BEACON_MAX_TIME = 60; // 60 * 60 * 24
-    @Autowired
+    @Reference(version = "1.0.0", timeout = 60000)
     UserService userService;
 
     @Autowired

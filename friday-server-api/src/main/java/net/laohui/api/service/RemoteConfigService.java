@@ -1,8 +1,8 @@
 package net.laohui.api.service;
 
 
-import net.laohui.api.bean.Config;
+import net.laohui.api.bean.RemoteConfig;
 
 public interface RemoteConfigService {
-    Config getConfig(String key);
+    RemoteConfig getConfig(String key);
 }

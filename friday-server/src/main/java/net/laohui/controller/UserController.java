@@ -1,14 +1,15 @@
 package net.laohui.controller;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import lombok.extern.log4j.Log4j2;
+import net.laohui.api.bean.User;
+import net.laohui.api.service.UserService;
 import net.laohui.config.RedisConfig;
 import net.laohui.enumerate.UserStatusEnum;
 import net.laohui.exception.OperationException;
 import net.laohui.exception.PermissionsException;
-import net.laohui.pojo.User;
-import net.laohui.pojo.UserRequestBody;
-import net.laohui.pojo.datamodel.UserProfile;
-import net.laohui.service.impl.UserServiceImpl;
+import net.laohui.api.bean.UserRequestBody;
+import net.laohui.api.bean.UserProfile;
 import net.laohui.util.JWTUtil;
 import net.laohui.util.RedisUtils;
 import net.laohui.util.ResponseResult;
@@ -36,15 +37,15 @@ import static org.apache.logging.log4j.util.Strings.isBlank;
 @RequestMapping(value = "user")
 public class UserController {
 
-    UserServiceImpl userServiceImpl;
+    @Reference(version = "1.0.0", timeout = 60000)
+    UserService userService;
     HttpServletRequest request;
     HttpServletResponse response;
     RedisUtils redisUtils;
 
     @Autowired
-    public UserController(UserServiceImpl userServiceImpl, HttpServletRequest request, HttpServletResponse response,
+    public UserController(HttpServletRequest request, HttpServletResponse response,
                           RedisUtils redisUtils) {
-        this.userServiceImpl = userServiceImpl;
         this.request = request;
         this.response = response;
         this.redisUtils = redisUtils;
@@ -70,7 +71,7 @@ public class UserController {
         if (isBlank(username) || isBlank(password)) {
             return ResponseResult.error(400, "账户名和密码均为必须！");
         }
-        User user = userServiceImpl.checkUser(username, password);
+        User user = userService.checkUser(username, password);
         if (user != null && user.getUser_id() > 0) {
             try {
                 userStatus = UserStatusEnum.valueOf(user.getUser_status());
@@ -81,16 +82,15 @@ public class UserController {
                 log.error("禁止登录的用户正在尝试登录!user={}", user);
                 return ResponseResult.error(500, userStatus.getMessage());
             }
-            log.info("select user is : {}", user.toString());
             user.setLogin_ip(request.getRemoteHost());
             user.setLogin_time(new Date());
             user.setLogin_city(request.getRemoteAddr());
             user.setLogin_browser_ua(parameterUserAgent);
-            userServiceImpl.updateUserById(user);
+            userService.updateUserByUserId(user.getUser_id(), user);
             UserProfile userProfile = new UserProfile(user);
             if (!redisUtils.set(RedisConfig.LOGIN_BEACON + user.getUser_account_name(),userProfile, LOGIN_BEACON_MAX_TIME)) {
                 log.error("Redis用户信息写入失败{}", userProfile);
-                throw new OperationException("登录失败！");
+                throw new OperationException("登录失败！服务器异常！");
             }
             Map<String, Object> userInfo = userProfile.asMap();
             String token = JWTUtil.createToken(userInfo);
@@ -130,7 +130,7 @@ public class UserController {
         }
         boolean status = false;
         try {
-            status = userServiceImpl.addUser(user);
+            status = userService.addUser(user);
         } catch (DuplicateKeyException e) {
             if (Objects.requireNonNull(e.getMessage()).contains("SQLIntegrityConstraintViolationException")) {
                 return ResponseResult.error(500,"用户已存在！");
@@ -139,17 +139,6 @@ public class UserController {
 
         return ResponseResult.success(status);
 
-    }
-
-    @RequestMapping(value = "hasUser", method = {RequestMethod.OPTIONS, RequestMethod.GET})
-    @ResponseBody
-    public ResponseResult<String> hasUser(@RequestParam("username") String username) {
-        boolean integer = userServiceImpl.hasUser(username);
-        if (integer) {
-            return ResponseResult.error(400, "用户已存在！");
-        } else {
-            return ResponseResult.success("用户可以注册！");
-        }
     }
 
     @RequiresAuthentication
@@ -167,15 +156,23 @@ public class UserController {
         return ResponseResult.success(userProfile);
     }
 
-    @RequiresAuthentication
     @GetMapping(value = "logout")
     @ResponseBody
     public ResponseResult<String> logout() {
-        Subject subject = SecurityUtils.getSubject();
-        if (!subject.isAuthenticated()) {
+        String authorization = request.getHeader("Authorization");
+        Map<String, Object> tokenInfo = JWTUtil.verifyToken(authorization);
+        Object userName = tokenInfo.get("userName");
+        if (userName == null) {
             return ResponseResult.error(401, "状态异常，请先登录!");
+        } else {
+            redisUtils.del(RedisConfig.LOGIN_BEACON + userName);
+            if (redisUtils.hasKey(RedisConfig.LOGIN_BEACON + userName)) {
+                log.error("Redis用户信息删除失败{}", userName);
+            } else {
+                log.info("Redis用户信息删除成功{}", userName);
+            }
+            return ResponseResult.success("退出成功！");
         }
-        return ResponseResult.success("退出成功！");
     }
 
     @GetMapping(value = "sendCode")

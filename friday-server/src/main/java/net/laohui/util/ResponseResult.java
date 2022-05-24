@@ -3,6 +3,11 @@ package net.laohui.util;
 import lombok.Data;
 import net.laohui.enumerate.ResponseResultEnum;
 
+/**
+ * @author laohui
+ * @desc 响应结果封装，会由切面拦截更改状态码
+ * @param <T>
+ */
 @Data
 public class ResponseResult<T> {
     private Integer code;
@@ -33,11 +38,19 @@ public class ResponseResult<T> {
         return response;
     }
 
-    public static <T> ResponseResult<T> error(Integer code, String message) {
+    public static <T> ResponseResult<T> error(Integer httpStatusCode, String message) {
         ResponseResult<T> response = new ResponseResult<>();
-        response.setCode(code);
+        response.setCode(httpStatusCode);
         response.setStatus(false);
         response.setMessage(message);
+        return response;
+    }
+
+    public static <T> ResponseResult<T> error(Integer httpStatusCode, T data) {
+        ResponseResult<T> response = new ResponseResult<>();
+        response.setCode(httpStatusCode);
+        response.setStatus(false);
+        response.setData(data);
         return response;
     }
 }

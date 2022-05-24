@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import static com.alibaba.druid.util.StringUtils.isEmpty;
+import static org.apache.logging.log4j.util.Strings.isNotEmpty;
 
 @Log4j2
 @RestControllerAdvice
@@ -55,8 +55,9 @@ public class ErrorHandler {
     @ExceptionHandler(SystemException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ResponseResult<String> SystemException(SystemException e) {
-        log.error("系统错误: {}", e.getMessage());
-        return ResponseResult.error(ResponseResultEnum.RC500.getCode(), ResponseResultEnum.RC500.getMessage());
+        String message = e.getMessage();
+        log.error("系统错误: {}", message);
+        return ResponseResult.error(ResponseResultEnum.RC500.getCode(), isNotEmpty(message) ? message : ResponseResultEnum.RC500.getMessage());
     }
 
     /**
@@ -67,8 +68,8 @@ public class ErrorHandler {
     @ExceptionHandler(OperationException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseResult<String> OperationException(OperationException e) {
-        log.error("操作错误: {}", e.getMessage());
         String message = e.getMessage();
-        return ResponseResult.error(ResponseResultEnum.RC400.getCode(), isEmpty(message) ? ResponseResultEnum.RC400.getMessage() : message);
+        log.error("操作错误: {}", message);
+        return ResponseResult.error(ResponseResultEnum.RC400.getCode(), isNotEmpty(message) ? message : ResponseResultEnum.RC400.getMessage());
     }
 }

@@ -81,10 +81,10 @@ public class shiroConfig {
 //        bean.setUnauthorizedUrl("/unauthorizedurl");
         bean.setFilters(filters);
 //        filterMap.put("/admin/**", "JwtFilter");
-//        filterMap.put("/user/login", "anon");
-//        filterMap.put("/user/register", "anon");
-//        filterMap.put("/user/forget", "anon");
-//        filterMap.put("/user/logout", "anon");
+        filterMap.put("/user/login", "anon");
+        filterMap.put("/user/register", "anon");
+        filterMap.put("/user/forget", "anon");
+        filterMap.put("/user/logout", "anon");
 //        filterMap.put("/user/**", "JwtFilter");
 //        filterMap.put("/user/**", "JwtFilter");
         filterMap.put("/**", "JwtFilter");
