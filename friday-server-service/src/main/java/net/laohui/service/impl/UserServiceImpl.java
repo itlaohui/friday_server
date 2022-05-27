@@ -2,9 +2,11 @@ package net.laohui.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import lombok.extern.log4j.Log4j2;
-import net.laohui.api.bean.User;
+import net.laohui.api.bean.domain.User;
 import net.laohui.api.service.UserService;
 import net.laohui.dao.UserMapper;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -33,6 +35,7 @@ public class UserServiceImpl implements UserService {
         return userMapper.selectOne(queryWrapper);
     }
 
+    @Cacheable(cacheNames = "user", key = "#userName")
     @Override
     public User getUserByUserName(String userName) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
@@ -42,6 +45,7 @@ public class UserServiceImpl implements UserService {
         return userMapper.selectOne(queryWrapper);
     }
 
+    @Cacheable(cacheNames = "user", key = "#userId")
     @Override
     public User getUserByUserId(Integer userId) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
@@ -72,27 +76,33 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean addUser(User data) {
-        return userMapper.insert(data) > 0;
+    public User addUser(User data) {
+        return userMapper.insert(data) > 0 ? data : null;
     }
 
+    @CachePut(cacheNames = "user", key = "#userId")
     @Override
-    public boolean updateUserByUserId(Integer userId, User data) {
+    public User updateUserByUserId(Integer userId, User data) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         User user = new User();
         user.setUser_id(userId);
         queryWrapper.setEntity(user);
-        return userMapper.update(data, queryWrapper) > 0;
+        if (userMapper.update(data, queryWrapper) > 0) {
+            return userMapper.selectOne(queryWrapper);
+        } else {
+            return null;
+        }
     }
 
     @Override
-    public boolean updateUserByUserName(String userName, User data) {
+    public User updateUserByUserName(String userName, User data) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         User user = new User();
         user.setUser_account_name(userName);
         queryWrapper.setEntity(user);
-        return userMapper.update(data, queryWrapper) > 0;
+        return userMapper.update(data, queryWrapper) > 0 ? data : null;
     }
+
 
     @Override
     public boolean deleteUser(Integer userId, String userName) {
@@ -109,43 +119,14 @@ public class UserServiceImpl implements UserService {
         return userMapper.selectUserList(page, size);
     }
 
-    public User getUserById(Integer id) {
-        User user = new User();
-        user.setUser_id(1);
-        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.setEntity(user);
-        return userMapper.selectOne(queryWrapper);
-    }
-
-    public User getUserByAccountName(String accountName) {
-        return new User();
-    }
-
-    public User getUserByEmail(String Email) {
-        return new User();
-    }
-
-    public Integer updateUserById(User user) {
-        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("user_id", user.getUser_id());
-        return userMapper.update(user,queryWrapper);
-    }
-
-    public Integer insertUser(User user) {
-        return userMapper.insert(user);
-    }
-
-    public boolean hasUser(String username) {
-        return userMapper.hasUser(username);
-    }
-
+    @Override
     public boolean deleteUser(User user) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.setEntity(user);
-        int delete = userMapper.delete(queryWrapper);
-        return delete > 0;
+        return userMapper.delete(queryWrapper) > 0;
     }
 
+    @Override
     public Integer getUserCount() {
         return userMapper.selectCount(null);
     }

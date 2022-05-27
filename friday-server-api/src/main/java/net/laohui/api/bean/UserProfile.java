@@ -1,5 +1,6 @@
 package net.laohui.api.bean;
 
+import net.laohui.api.bean.domain.User;
 import net.laohui.api.util.ClassToMap;
 import java.util.Map;
 

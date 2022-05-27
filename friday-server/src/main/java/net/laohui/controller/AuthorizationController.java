@@ -6,7 +6,7 @@ import lombok.extern.log4j.Log4j2;
 import net.laohui.api.service.UserService;
 import net.laohui.config.RedisConfig;
 import net.laohui.enumerate.UserStatusEnum;
-import net.laohui.api.bean.User;
+import net.laohui.api.bean.domain.User;
 import net.laohui.api.bean.UserRequestBody;
 import net.laohui.api.bean.UserProfile;
 import net.laohui.util.JWTUtil;
@@ -64,7 +64,7 @@ public class AuthorizationController {
         UserRequestBody userBody = new UserRequestBody();
         String userBodyUsername = Objects.isNull(userBody) ? null : userBody.getUsername();
         String userBodyPassword = Objects.isNull(userBody) ? null : userBody.getPassword();
-        String userBodyCode = Objects.isNull(userBody) ? null : userBody.getCode();
+//        String userBodyCode = Objects.isNull(userBody) ? null : userBody.getCode();
         //其他方式走这里
         String parameterUsername = request.getParameter("username");
         String parameterPassword = request.getParameter("password");
@@ -135,7 +135,7 @@ public class AuthorizationController {
         } else {
             user.setUser_sex(2);
         }
-        boolean status = false;
+        User status = null;
         try {
             status = userService.addUser(user);
         } catch (DuplicateKeyException e) {

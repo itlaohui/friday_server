@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="fastRequestHistoryConfig">
+    <option name="historyList">
+      <list>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigExtList?keywords=s123" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigExtList?keywords=s123%3Fsize%3D1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&#10;&#9;&quot;code&quot;:500,&#10;&#9;&quot;message&quot;:&quot;系统异常，请稍后重试&quot;,&#10;&#9;&quot;status&quot;:false,&#10;&#9;&quot;timestamp&quot;:1653649857840&#10;}" />
+          <option name="url" value="/admin/getConfigExtList?keywords=s123" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigExtList?keywords=s123" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigExtList?keywords=s123%3Fsize%3D1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&#10;&#9;&quot;code&quot;:500,&#10;&#9;&quot;message&quot;:&quot;系统异常，请稍后重试&quot;,&#10;&#9;&quot;status&quot;:false,&#10;&#9;&quot;timestamp&quot;:1653649733337&#10;}" />
+          <option name="url" value="/admin/getConfigExtList?keywords=s123" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigExtList?keywords=sysConfig%3Fsize%3D1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&#10;&#9;&quot;code&quot;:500,&#10;&#9;&quot;message&quot;:&quot;系统异常，请稍后重试&quot;,&#10;&#9;&quot;status&quot;:false,&#10;&#9;&quot;timestamp&quot;:1653649697677&#10;}" />
+          <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigExtList?keywords=sysConfig%3Fsize%3D1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&#10;&#9;&quot;code&quot;:500,&#10;&#9;&quot;message&quot;:&quot;系统异常，请稍后重试&quot;,&#10;&#9;&quot;status&quot;:false,&#10;&#9;&quot;timestamp&quot;:1653649396082&#10;}" />
+          <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigExtList?keywords=sysConfig%3Fsize%3D1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="ConnectException: Connection refused: connect" />
+          <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigExtList?keywords=sysConfig%3Fsize%3D1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&#10;&#9;&quot;code&quot;:500,&#10;&#9;&quot;message&quot;:&quot;系统异常，请稍后重试&quot;,&#10;&#9;&quot;status&quot;:false,&#10;&#9;&quot;timestamp&quot;:1653649373626&#10;}" />
+          <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigExtList?keywords=sysConfig%3Fsize%3D1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&#10;&#9;&quot;code&quot;:500,&#10;&#9;&quot;message&quot;:&quot;系统异常，请稍后重试&quot;,&#10;&#9;&quot;status&quot;:false,&#10;&#9;&quot;timestamp&quot;:1653649372776&#10;}" />
+          <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigExtList?keywords=sysConfig%3Fsize%3D1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&#10;&#9;&quot;code&quot;:500,&#10;&#9;&quot;message&quot;:&quot;系统异常，请稍后重试&quot;,&#10;&#9;&quot;status&quot;:false,&#10;&#9;&quot;timestamp&quot;:1653649357286&#10;}" />
+          <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigExtList?keywords=sysConfig%3Fsize%3D1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&#10;&#9;&quot;code&quot;:500,&#10;&#9;&quot;message&quot;:&quot;系统异常，请稍后重试&quot;,&#10;&#9;&quot;status&quot;:false,&#10;&#9;&quot;timestamp&quot;:1653649356396&#10;}" />
+          <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigExtList?keywords=sysConfig%3Fsize%3D1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&#10;&#9;&quot;code&quot;:500,&#10;&#9;&quot;message&quot;:&quot;系统异常，请稍后重试&quot;,&#10;&#9;&quot;status&quot;:false,&#10;&#9;&quot;timestamp&quot;:1653649346252&#10;}" />
+          <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigExtList?keywords=sysConfig%3Fsize%3D1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&#10;&#9;&quot;code&quot;:500,&#10;&#9;&quot;message&quot;:&quot;系统异常，请稍后重试&quot;,&#10;&#9;&quot;status&quot;:false,&#10;&#9;&quot;timestamp&quot;:1653649300197&#10;}" />
+          <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigExtList?keywords=sysConfig%3Fsize%3D1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&#10;&#9;&quot;code&quot;:500,&#10;&#9;&quot;message&quot;:&quot;系统异常，请稍后重试&quot;,&#10;&#9;&quot;status&quot;:false,&#10;&#9;&quot;timestamp&quot;:1653649185211&#10;}" />
+          <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigExtList?keywords=sysConfig%3Fsize%3D1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&#10;&#9;&quot;code&quot;:500,&#10;&#9;&quot;message&quot;:&quot;系统异常，请稍后重试&quot;,&#10;&#9;&quot;status&quot;:false,&#10;&#9;&quot;timestamp&quot;:1653649098331&#10;}" />
+          <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigExtList?keywords=sysConfig%3Fsize%3D1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&#10;&#9;&quot;code&quot;:500,&#10;&#9;&quot;message&quot;:&quot;系统异常，请稍后重试&quot;,&#10;&#9;&quot;status&quot;:false,&#10;&#9;&quot;timestamp&quot;:1653649043597&#10;}" />
+          <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigExtList?keywords=sysConfig%3Fsize%3D1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&#10;&#9;&quot;code&quot;:500,&#10;&#9;&quot;message&quot;:&quot;系统异常，请稍后重试&quot;,&#10;&#9;&quot;status&quot;:false,&#10;&#9;&quot;timestamp&quot;:1653649001095&#10;}" />
+          <option name="url" value="/admin/getConfigExtList?keywords=sysConfig" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigExtList" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigExtList?size=1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&#10;&#9;&quot;data&quot;:{&#10;&#9;&#9;&quot;data&quot;:[],&#10;&#9;&#9;&quot;count&quot;:1&#10;&#9;},&#10;&#9;&quot;message&quot;:&quot;查询成功&quot;,&#10;&#9;&quot;status&quot;:true,&#10;&#9;&quot;timestamp&quot;:1653648987425&#10;}" />
+          <option name="url" value="/admin/getConfigExtList" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigList" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigList?size=1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&#10;&#9;&quot;data&quot;:{&#10;&#9;&#9;&quot;data&quot;:[&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;&quot;cid&quot;:1,&#10;&#9;&#9;&#9;&#9;&quot;create_found&quot;:&quot;0&quot;,&#10;&#9;&#9;&#9;&#9;&quot;create_time&quot;:&quot;2022-05-27 15:12:04&quot;,&#10;&#9;&#9;&#9;&#9;&quot;id&quot;:1,&#10;&#9;&#9;&#9;&#9;&quot;name&quot;:&quot;sysConfig&quot;,&#10;&#9;&#9;&#9;&#9;&quot;need_login&quot;:true,&#10;&#9;&#9;&#9;&#9;&quot;title&quot;:&quot;系统配置&quot;,&#10;&#9;&#9;&#9;&#9;&quot;update_time&quot;:&quot;2022-05-27 15:12:07&quot;&#10;&#9;&#9;&#9;}&#10;&#9;&#9;],&#10;&#9;&#9;&quot;count&quot;:1&#10;&#9;},&#10;&#9;&quot;message&quot;:&quot;查询成功&quot;,&#10;&#9;&quot;status&quot;:true,&#10;&#9;&quot;timestamp&quot;:1653648976404&#10;}" />
+          <option name="url" value="/admin/getConfigList" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigList" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigList?size=1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&#10;&#9;&quot;data&quot;:{&#10;&#9;&#9;&quot;data&quot;:[&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;&quot;cid&quot;:1,&#10;&#9;&#9;&#9;&#9;&quot;create_found&quot;:&quot;0&quot;,&#10;&#9;&#9;&#9;&#9;&quot;create_time&quot;:&quot;2022-05-27 15:12:04&quot;,&#10;&#9;&#9;&#9;&#9;&quot;id&quot;:1,&#10;&#9;&#9;&#9;&#9;&quot;name&quot;:&quot;sysConfig&quot;,&#10;&#9;&#9;&#9;&#9;&quot;need_login&quot;:true,&#10;&#9;&#9;&#9;&#9;&quot;title&quot;:&quot;系统配置&quot;,&#10;&#9;&#9;&#9;&#9;&quot;update_time&quot;:&quot;2022-05-27 15:12:07&quot;&#10;&#9;&#9;&#9;}&#10;&#9;&#9;],&#10;&#9;&#9;&quot;count&quot;:1&#10;&#9;},&#10;&#9;&quot;message&quot;:&quot;查询成功&quot;,&#10;&#9;&quot;status&quot;:true,&#10;&#9;&quot;timestamp&quot;:1653642465339&#10;}" />
+          <option name="url" value="/admin/getConfigList" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigList" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:false,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigList?size=1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&#10;&#9;&quot;data&quot;:{&#10;&#9;&#9;&quot;data&quot;:[&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;&quot;cid&quot;:1,&#10;&#9;&#9;&#9;&#9;&quot;create_found&quot;:&quot;0&quot;,&#10;&#9;&#9;&#9;&#9;&quot;create_time&quot;:&quot;2022-05-27 15:12:04&quot;,&#10;&#9;&#9;&#9;&#9;&quot;id&quot;:1,&#10;&#9;&#9;&#9;&#9;&quot;name&quot;:&quot;sysConfig&quot;,&#10;&#9;&#9;&#9;&#9;&quot;need_login&quot;:true,&#10;&#9;&#9;&#9;&#9;&quot;title&quot;:&quot;系统配置&quot;,&#10;&#9;&#9;&#9;&#9;&quot;update_time&quot;:&quot;2022-05-27 15:12:07&quot;&#10;&#9;&#9;&#9;}&#10;&#9;&#9;],&#10;&#9;&#9;&quot;count&quot;:1&#10;&#9;},&#10;&#9;&quot;message&quot;:&quot;查询成功&quot;,&#10;&#9;&quot;status&quot;:true,&#10;&#9;&quot;timestamp&quot;:1653642409534&#10;}" />
+          <option name="url" value="/admin/getConfigList" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="net.laohui.controller.AdminController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="dev" />
+          <option name="enableProject" value="friday-sso" />
+          <option name="method" value="getConfigList" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="" />
+              <option name="className" value="net.laohui.controller.AdminController" />
+              <option name="jsonDocument" value="" />
+              <option name="method" value="getConfigList" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="GET" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="admin/getConfigList" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/admin/getConfigList" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlEncodedKeyValueListText" value="" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;size&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;keywords_0nwcf&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;size=1&#10;&amp;keywords=keywords_0nwcf" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8010/admin/getConfigList?page=1&amp;keywords=keywords_0nwcf&amp;size=1&#13;&#10;Request Headers: &#13;&#10;    authorization: eyJUeXBlIjoiSnd0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySW5mbyI6eyJwaG9uZU51bWJlciI6IjExMSIsImxvZ2luVGltZSI6MTY1MzY0MjMwNDk3MCwibmlja05hbWUiOiLpqazpgqblvrciLCJhdmF0YXIiOiIiLCJ1c2VyTmFtZSI6InJvb3QiLCJlbWFpbCI6IjEyM0BsYW9odWkubmV0In0sImV4cCI6MTY1MzcyODcwNX0.QZ_p2czQsPlwXzJtbpVjjz6pU3nh2hVh16zYCY6uVhA&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&#10;&#9;&quot;data&quot;:{&#10;&#9;&#9;&quot;data&quot;:[],&#10;&#9;&#9;&quot;count&quot;:1&#10;&#9;},&#10;&#9;&quot;message&quot;:&quot;查询成功&quot;,&#10;&#9;&quot;status&quot;:true,&#10;&#9;&quot;timestamp&quot;:1653642400052&#10;}" />
+          <option name="url" value="/admin/getConfigList" />
+        </ResponseHistory>
+      </list>
+    </option>
+  </component>
+</project>

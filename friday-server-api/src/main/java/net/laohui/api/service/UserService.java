@@ -1,7 +1,7 @@
 package net.laohui.api.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import net.laohui.api.bean.User;
+import net.laohui.api.bean.domain.User;
 
 import java.util.List;
 
@@ -25,11 +25,11 @@ public interface UserService {
     // 根据条件获取用户数量
     Integer countUserByWhere(QueryWrapper<User> queryWrapper);
     // 添加用户
-    boolean addUser(User data);
+    User addUser(User data);
     // 更新用户(根据用户ID)
-    boolean updateUserByUserId(Integer userId, User data);
+    User updateUserByUserId(Integer userId, User data);
     // 更新用户(根据用户名)
-    boolean updateUserByUserName(String userName, User data);
+    User updateUserByUserName(String userName, User data);
     // 删除用户
     boolean deleteUser(Integer userId, String userName);
     // 删除用户

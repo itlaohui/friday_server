@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.laohui.dao.ConfigsMapper">
+
+    <resultMap id="config" type="net.laohui.api.bean.domain.Configs">
+        <id property="id" column="c1_id"/>
+        <result property="cid" column="c1_cid"/>
+        <result property="name" column="c1_name"/>
+        <result property="title" column="c1_title"/>
+        <result property="create_found" column="c1_create_found"/>
+        <result property="create_time" column="c1_create_time"/>
+        <result property="update_time" column="c1_update_time"/>
+        <result property="need_login" column="c1_need_login"/>
+        <collection property="config_list" ofType="net.laohui.api.bean.ConfigExt">
+            <id property="id" column="c2_id"/>
+            <result property="cid" column="c2_cid"/>
+            <result property="key" column="c2_key"/>
+            <result property="value" column="c2_value"/>
+            <result property="title" column="c2_title"/>
+            <result property="create_time" column="c2_create_time"/>
+        </collection>
+    </resultMap>
+
+    <select id="getConfig" resultMap="config">
+        select
+            c1.`id` as c1_id,
+            c1.`cid` as c1_cid,
+            c1.`name` as c1_name,
+            c1.`title` as c1_title,
+            c1.`create_found` as c1_create_found,
+            c1.`create_time` as c1_create_time,
+            c1.`update_time` as c1_update_time,
+            if(c1.`need_login` = 1, true, false) as c1_need_login,
+            c2.`id` as c2_id,
+            c2.`cid` as c2_cid,
+            c2.`key` as c2_key,
+            c2.`value` as c2_value,
+            c2.`title` as c2_title,
+            c2.`create_time` as c2_create_time
+        from
+            f_configs c1,
+            f_configs_ext c2
+        where
+            c1.`cid` = c2.`cid` AND c1.`name` = #{name}
+    </select>
+
+    <select id="getConfigExtList" resultType="net.laohui.api.bean.ConfigExt">
+
+    </select>
+</mapper>

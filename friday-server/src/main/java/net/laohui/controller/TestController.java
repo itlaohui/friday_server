@@ -2,7 +2,7 @@ package net.laohui.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import lombok.extern.log4j.Log4j2;
-import net.laohui.api.bean.User;
+import net.laohui.api.bean.domain.User;
 import net.laohui.config.Producer;
 import net.laohui.api.service.UserService;
 import net.laohui.util.JWTUtil;
@@ -75,5 +75,13 @@ public class TestController {
             @RequestParam(value = "message", required = false) String message) {
         producer.sendMsg(topic, message);
         return "sendMessage";
+    }
+
+    @GetMapping(value = "user/getUser")
+    @ResponseBody
+    public ResponseResult<User> getUserById(@RequestParam("id") String userId) {
+
+        User user = userService.getUserByUserId(Integer.valueOf(userId));
+        return ResponseResult.success(user);
     }
 }

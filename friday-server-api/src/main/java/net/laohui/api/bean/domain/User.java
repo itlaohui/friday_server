@@ -1,4 +1,4 @@
-package net.laohui.api.bean;
+package net.laohui.api.bean.domain;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import com.baomidou.mybatisplus.annotation.IdType;

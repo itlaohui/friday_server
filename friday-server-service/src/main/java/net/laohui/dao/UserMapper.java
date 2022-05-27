@@ -1,7 +1,7 @@
 package net.laohui.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import net.laohui.api.bean.User;
+import net.laohui.api.bean.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;

@@ -1,8 +1,8 @@
 package net.laohui.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import net.laohui.api.bean.RemoteConfig;
-import net.laohui.api.service.RemoteConfigService;
+import net.laohui.api.bean.domain.Configs;
+import net.laohui.api.service.ConfigsService;
 import net.laohui.util.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 public class RemoteConfigController {
 
     @Reference(version = "1.0.0", timeout = 60000)
-    RemoteConfigService remoteConfigService;
+    ConfigsService configsService;
 
     HttpServletRequest request;
 
@@ -24,14 +24,14 @@ public class RemoteConfigController {
     }
 
     @GetMapping(value = "getConfig")
-    public ResponseResult<RemoteConfig> getConfig() {
+    public ResponseResult<Configs> getConfig() {
         String key = request.getParameter("key");
-        RemoteConfig config = remoteConfigService.getConfig(key);
+        Configs config = configsService.getConfig(key);
         return ResponseResult.success(config);
     }
 
     @PostMapping(value = "setConfig")
-    public ResponseResult<RemoteConfig> setConfig(@RequestParam("config") RemoteConfig config) {
+    public ResponseResult<Configs> setConfig(@RequestParam("config") Configs config) {
         return ResponseResult.success(config);
     }
 

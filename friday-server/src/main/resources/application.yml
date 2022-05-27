@@ -1,7 +1,7 @@
 spring:
   redis:
-    host: localhost
-    port: 6379
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
     timeout: 1000
     jedis:
       pool:
@@ -9,7 +9,7 @@ spring:
         max-idle: 10
         max-wait: -1
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: ${KAFKA_HOST:localhost}:${KAFKA_PORT:9092}
     consumer:
       group-id: friday-consumer
       enable-auto-commit: true
@@ -51,12 +51,9 @@ dubbo:
   application:
     name: friday-server # 消息者名字
   registry:
-    address: zookeeper://172.16.2.136:2181 # 注册中心地址
+    address: zookeeper://localhost:2181 # 注册中心地址
     check: false
   protocol:
-    port: 9091
+    port: ${DUBBO_PORT:20880}
   consumer:
     check: false
-  provider:
-    host: 172.16.2.136
-

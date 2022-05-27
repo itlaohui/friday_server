@@ -3,12 +3,14 @@ package net.laohui.controller;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.log4j.Log4j2;
+import net.laohui.api.bean.ConfigExt;
 import net.laohui.enumerate.UserStatusEnum;
 import net.laohui.exception.OperationException;
-import net.laohui.api.bean.RemoteConfig;
-import net.laohui.api.bean.User;
-import net.laohui.api.service.RemoteConfigService;
+import net.laohui.api.bean.domain.Configs;
+import net.laohui.api.bean.domain.User;
+import net.laohui.api.service.ConfigsService;
 import net.laohui.api.service.UserService;
 import net.laohui.util.ResponseResult;
 import org.apache.shiro.authz.annotation.RequiresAuthentication;
@@ -32,7 +34,7 @@ public class AdminController {
     @Reference(version = "1.0.0", timeout = 60000)
     UserService userService;
     @Reference(version = "1.0.0", timeout = 60000)
-    RemoteConfigService remoteConfigService;
+    ConfigsService configsService;
     HttpServletRequest request;
     HttpServletResponse response;
 
@@ -73,7 +75,7 @@ public class AdminController {
             log.error("user_status is not valid");
         }
         log.info("user:{}", user_account_name);
-        if (userService.addUser(user)) {
+        if (userService.addUser(user) != null) {
             return ResponseResult.success("添加成功", user);
         }
         return ResponseResult.error(400, "添加失败");
@@ -87,8 +89,8 @@ public class AdminController {
     @RequestMapping(value = "getUserList", method = {RequestMethod.POST, RequestMethod.GET})
     public ResponseResult<JSONObject> getUserList() {
         Integer page = isBlank(request.getParameter("page")) ? 1 : Integer.parseInt(request.getParameter("page"));
-        Integer size = isBlank(request.getParameter("pageSize")) ? 20 : Integer.parseInt(request.getParameter(
-                "pageSize"));
+        Integer size = isBlank(request.getParameter("size")) ? 20 : Integer.parseInt(request.getParameter(
+                "size"));
         size.equals(0);
         System.out.println(page + " " + size);
         List<User> userList = userService.getUserList(page, size);
@@ -168,8 +170,7 @@ public class AdminController {
             e.printStackTrace();
         }
         try {
-            boolean updateUserStatus = userService.updateUserByUserId(user.getUser_id(), user);
-            if (!updateUserStatus) {
+            if (userService.updateUserByUserId(user.getUser_id(), user) == null) {
                 return ResponseResult.error(400, "更新失败");
             }
         } catch (DuplicateKeyException e) {
@@ -182,10 +183,47 @@ public class AdminController {
         return ResponseResult.success("修改成功", user);
     }
 
-    @GetMapping(value = "getRemoteConfigList")
-    public ResponseResult<RemoteConfig> getRemoteConfigList() {
-        String key = request.getParameter("key");
-        RemoteConfig config = remoteConfigService.getConfig(key);
-        return ResponseResult.success("查询成功", config);
+    @GetMapping(value = "getConfigList")
+    public ResponseResult<Object> getConfigList(
+            @RequestParam(value = "page", required = false) Integer page,
+            @RequestParam(value = "size", required = false) Integer size,
+            @RequestParam(value = "keywords", required = false) String keywords)
+    {
+        if (page == null) {
+            page = 1;
+        }
+        if (size == null) {
+            size = 20;
+        }
+        if (keywords == null || keywords.equals("")) {
+            keywords = "";
+        }
+        Page<Configs> configList = configsService.getConfigList(keywords, page, size);
+        JSONObject response = new JSONObject();
+        response.put("count", configList.getSize());
+        response.put("data", configList.getRecords());
+        return ResponseResult.success("查询成功", response);
+    }
+
+    @GetMapping(value = "getConfigExtList")
+    public ResponseResult<Object> getConfigExtList(
+            @RequestParam(value = "page", required = false) Integer page,
+            @RequestParam(value = "size", required = false) Integer size,
+            @RequestParam(value = "keywords", required = false) String keywords
+    ) {
+        if (page == null) {
+            page = 1;
+        }
+        if (size == null) {
+            size = 20;
+        }
+        if (keywords == null || keywords.equals("")) {
+            keywords = "";
+        }
+        Page<ConfigExt> configList = configsService.getConfigExtList(keywords, page, size);
+        JSONObject response = new JSONObject();
+        response.put("count", configList.getSize());
+        response.put("data", configList.getRecords());
+        return ResponseResult.success("查询成功", response);
     }
 }

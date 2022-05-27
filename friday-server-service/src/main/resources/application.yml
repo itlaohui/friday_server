@@ -3,12 +3,12 @@ spring:
   application:
     name: friday-server-service
   datasource:
-#    url: jdbc:mysql://182.254.220.232/firday
-#    username: firday
-#    password: xFT2cCisydk4N8R2
-    url: jdbc:mysql://172.16.2.140:3306/friday
-    username: root
-    password: 123456
+    url: jdbc:mysql://182.254.220.232/firday
+    username: firday
+    password: xFT2cCisydk4N8R2
+#    url: jdbc:mysql://172.16.2.140:3306/friday
+#    username: root
+#    password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
 
@@ -24,7 +24,7 @@ dubbo:
   scan:
     base-packages: net.laohui.service
   protocol:
-    port: 9092
+    port: 9091
     name: dubbo
   registry:
     address: zookeeper://127.0.0.1:2181

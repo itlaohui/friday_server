@@ -1,4 +1,4 @@
-package net.laohui.api.bean;
+package net.laohui.api.bean.domain;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;

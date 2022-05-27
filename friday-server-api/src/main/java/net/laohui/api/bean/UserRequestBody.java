@@ -8,5 +8,5 @@ import java.io.Serializable;
 public class UserRequestBody implements Serializable {
     private String username;
     private String password;
-    private String code;
+//    private String code;
 }

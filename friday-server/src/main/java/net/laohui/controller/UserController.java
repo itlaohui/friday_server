@@ -2,7 +2,7 @@ package net.laohui.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import lombok.extern.log4j.Log4j2;
-import net.laohui.api.bean.User;
+import net.laohui.api.bean.domain.User;
 import net.laohui.api.service.UserService;
 import net.laohui.config.RedisConfig;
 import net.laohui.enumerate.UserStatusEnum;
@@ -53,12 +53,11 @@ public class UserController {
 
     @RequestMapping(value = "login", method = {RequestMethod.POST, RequestMethod.OPTIONS, RequestMethod.GET })
     @ResponseBody
-    public ResponseResult<Map<String, Object>> login() {
+    public ResponseResult<Map<String, Object>> login(@RequestBody(required = false) UserRequestBody userRequestBody) {
         //body提交走这里
-        UserRequestBody userBody = new UserRequestBody();
-        String userBodyUsername = Objects.isNull(userBody) ? null : userBody.getUsername();
-        String userBodyPassword = Objects.isNull(userBody) ? null : userBody.getPassword();
-        String userBodyCode = Objects.isNull(userBody) ? null : userBody.getCode();
+        String userBodyUsername = Objects.isNull(userRequestBody) ? null : userRequestBody.getUsername();
+        String userBodyPassword = Objects.isNull(userRequestBody) ? null : userRequestBody.getPassword();
+//        String userBodyCode = Objects.isNull(userRequestBody) ? null : userRequestBody.getCode();
         //其他方式走这里
         String parameterUsername = request.getParameter("username");
         String parameterPassword = request.getParameter("password");
@@ -128,7 +127,7 @@ public class UserController {
         } else {
             user.setUser_sex(2);
         }
-        boolean status = false;
+        User status = null;
         try {
             status = userService.addUser(user);
         } catch (DuplicateKeyException e) {
